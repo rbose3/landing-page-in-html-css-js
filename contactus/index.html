@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="contactus.css" />
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function() {
+          emailjs.init("Vnph091JSmP4apxa0");
+      })();
+    </script>
+    <link rel="icon" type="image/x-icon" href="https://res.cloudinary.com/dthdwfhej/image/upload/v1724480849/icon_mskxqh.png" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="contact-form">
+        <form id="contact-form" autocomplete="off">
+          <h3 class="title">Contact us</h3>
+          <div class="input-container">
+            <input type="text" id="name" name="name" class="input" required />
+            <label for="name">Username</label>
+            <span>Username</span>
+          </div>
+          <div class="input-container">
+            <input type="email" id="email" name="email" class="input" required />
+            <label for="email">Email</label>
+            <span>Email</span>
+          </div>
+          <div class="input-container">
+            <input type="tel" id="phone" name="phone" class="input" required />
+            <label for="phone">Phone</label>
+            <span>Phone</span>
+          </div>
+          <div class="input-container textarea">
+            <textarea name="message" id="message" class="input" required></textarea>
+            <label for="message">Message</label>
+            <span>Message</span>
+          </div>
+          <button type="button" onclick="sendMail()" class="btn">Submit</button>
+        </form>
+      </div>
+    </div>
+    <script src="contactus.js"></script>
+  </body>
+</html>
